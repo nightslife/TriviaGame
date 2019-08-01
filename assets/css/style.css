@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+    font-size: 24px;
+}
+
+#questionForm{
+   display: none;
+   background-color: rgb(226, 226, 113);
+   width:80%;
+   position: relative;
+   left: 10%;
+}
+.question{
+    padding-top: 15px
+}
