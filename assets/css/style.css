@@ -41,7 +41,11 @@ body{
     display: none;
 }
 .question{
-    padding-top: 15px
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed black;
+    width: 75%;
+    margin: auto
 }
 #timerBlock{
     position: fixed;

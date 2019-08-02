@@ -10,7 +10,7 @@ const questionChoicesArr = ["darthVader","mammel","hallux","phobia","toy"];
 var missedAnswersCount = 0;
 var correctCount = 0;
 var intervalID;
-var timer = 180;
+var timer = 30;
 
 
 function newGame(){
@@ -57,7 +57,7 @@ function scoreGame(){
 
 function startingGame (){
     //restart game
-    timer=180
+    timer=30
     document.getElementById("answerForm").style.display = "none";
     document.getElementById("startingInfo").style.display = "block";
 
