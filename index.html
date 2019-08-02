@@ -18,7 +18,7 @@
             You have 30 seconds to complete as many questions as possible! Your score will be provided to you at the end.
             <div><button id=begin>Start the Quiz!</button></div>
         </div>
-        <div id=questionForm>
+        <div id="questionForm">
             
             <div class=question id=q1>
                 Who physically portrayed Darth Vader in the original Star Wars trilogy?<br>
@@ -37,13 +37,26 @@
             </div>
 
             <div class=question id=q3>
-        
+                In the human body, what is the hallux?<br>
+                <input type="radio" name="hallux" value="bigToe"> Big Toe
+                <input type="radio" name="hallux" value="earLobe"> Ear Lobe
+                <input type="radio" name="hallux" value="noseBridge"> Nose Bridge
+                <input type="radio" name="hallux" value="bellyButton"> Belly Button
             </div>
             <div class=question id=q4>
-    
+                If you suffer from oneirophobia, what are you scared of? <br>
+                <input type="radio" name="phobia" value="dreams"> Dreams
+                <input type="radio" name="phobia" value="clowns"> Clowns
+                <input type="radio" name="phobia" value="dark"> The Dark
+                <input type="radio" name="phobia" value="alone"> Being Alone 
             </div>
             <div class=question id=q5>
-    
+                What was the first toy commercial advertising for?<br>
+                <input type="radio" name="toy" value="easyOven"> Easy Bake Oven
+                <input type="radio" name="toy" value="slinky"> Slinky
+                <input type="radio" name="toy" value="potatoHead"> Mr. Potato Head
+                <input type="radio" name="toy" value="etchaSketch"> Etch-a-Sketch
+
             </div>
                                 
 
@@ -52,7 +65,11 @@
             <button id=submit>Submit</button>
             </div>
         </div>
-        
+        <div id="answerForm">
+            <div>You got <span id=totalCorrect></span> answers correct.</div>
+            <div>You got <span id=totalWrong></span> incorrect, including the <span id=notAnswered></span> questions you did not answer.</div>
+            <div><button id=playAgain> Play Again?</button></div>
+        </div>
         <script src="assets/javascript/app.js"></script>
     </body>
 </html>
