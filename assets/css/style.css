@@ -62,3 +62,5 @@ button{
     padding-top: 10px;
 }
 
+.element::-webkit-scrollbar { width: 0 !important }
+.element { overflow: -moz-scrollbars-none; }

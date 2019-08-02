@@ -5,10 +5,6 @@ window.onload = function(){
 }
 
 const correctAnswersArr = ["davidProwse","snake","bigToe","dreams","potatoHead"];
-var selectedAnswersArr = [];
-const questionChoicesArr = ["darthVader","mammel","hallux","phobia","toy"];
-var missedAnswersCount = 0;
-var correctCount = 0;
 var intervalID;
 var timer = 30;
 
@@ -32,27 +28,21 @@ function newGame(){
 function scoreGame(){
     clearInterval(intervalID);
     //Get selected answers
-    for (k of questionChoicesArr){
-        var radioValue = $("input[name="+k+"]:checked").val()
-        if(radioValue === undefined){
-            missedAnswersCount++
-        }else{
-            selectedAnswersArr.push(radioValue)
-        }
+    var unanswered = 0;
+    var correct = 0;
+    var i=0;
+    for (question of $('.question')){
+        var selection = $(question).find('input:checked').attr('value');
+        if(!selection) {unanswered++}
+        else if (selection === correctAnswersArr[i++]) correct++;
     }
     //Hide Questions Window and display correct window
     document.getElementById("questionForm").style.display = "none";
     document.getElementById("answerForm").style.display = "block";
-    //Calculate Correct Answers
-    for(a of selectedAnswersArr){
-        if(correctAnswersArr.indexOf(a) >= 0){
-            correctCount++
-        }
-    }
     //Display Correct Answers, Incorrect Answers, and Missed Answers totals
-    $("#totalCorrect").text(correctCount)
-    $("#totalWrong").text(correctAnswersArr.length-correctCount)
-    $('#notAnswered').text(missedAnswersCount)
+    $("#totalCorrect").text(correct)
+    $("#totalWrong").text(correctAnswersArr.length-correct)
+    $('#notAnswered').text(unanswered)
 }
 
 function startingGame (){
