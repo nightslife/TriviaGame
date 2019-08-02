@@ -7,23 +7,25 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
-        <div id=bigTitle>
-            Trivia Potpourri
-        </div>
-        <div id=littleTitle>
-            A grab bag of information
+        <div id="titleCard">
+            <div id="bigTitle">
+                Trivia Potpourri
+            </div>
+            <div id="littleTitle">
+                A grab bag of information
+            </div>
         </div>
 
-        <div id=startingInfo>
+        <div id="startingInfo">
             You have 30 seconds to complete as many questions as possible! Your score will be provided to you at the end.
-            <div><button id=begin>Start the Quiz!</button></div>
+            <div class="buttonDiv"><button id="begin">Start the Quiz!</button></div>
         </div>
         <div id="questionForm">
-                <div id=timerBlock>
+                <div id="timerBlock">
                     <p>Time Left:</p>
-                    <p id=timeDisplay></p>
+                    <p id="timeDisplay"></p>
                 </div>
-            <div class=question id=q1>
+            <div class="question" id="q"1>
                 Who physically portrayed Darth Vader in the original Star Wars trilogy?<br>
                     <input type="radio" name="darthVader" value="jamesEarlJones"> James Earl Jones
                     <input type="radio" name="darthVader" value="davidProwse"> David Prowse
@@ -31,7 +33,7 @@
                     <input type="radio" name="darthVader" value="sebastianShaw"> Sebastian Shaw
 
             </div>
-            <div class=question id=q2>
+            <div class="question" id="q2">
                 Which of these animals is not a mammel?<br>
                 <input type="radio" name="mammel" value="dolphin"> Dolphin
                 <input type="radio" name="mammel" value="bat"> Bat
@@ -39,21 +41,21 @@
                 <input type="radio" name="mammel" value="snake"> Snake
             </div>
 
-            <div class=question id=q3>
+            <div class="question" id="q3">
                 In the human body, what is the hallux?<br>
                 <input type="radio" name="hallux" value="bigToe"> Big Toe
                 <input type="radio" name="hallux" value="earLobe"> Ear Lobe
                 <input type="radio" name="hallux" value="noseBridge"> Nose Bridge
                 <input type="radio" name="hallux" value="bellyButton"> Belly Button
             </div>
-            <div class=question id=q4>
+            <div class="question" id="q4">
                 If you suffer from oneirophobia, what are you scared of? <br>
                 <input type="radio" name="phobia" value="dreams"> Dreams
                 <input type="radio" name="phobia" value="clowns"> Clowns
                 <input type="radio" name="phobia" value="dark"> The Dark
                 <input type="radio" name="phobia" value="alone"> Being Alone 
             </div>
-            <div class=question id=q5>
+            <div class="question" id="q5">
                 What was the first toy commercial advertising for?<br>
                 <input type="radio" name="toy" value="easyOven"> Easy Bake Oven
                 <input type="radio" name="toy" value="slinky"> Slinky
@@ -64,14 +66,14 @@
                                 
 
 
-            <div id=endSubmitDiv>
-            <button id=submit>Submit</button>
+            <div class="buttonDiv">
+            <button id="submit">Submit</button>
             </div>
         </div>
         <div id="answerForm">
             <div>You got <span id=totalCorrect></span> answers correct.</div>
-            <div>You got <span id=totalWrong></span> incorrect, including the <span id=notAnswered></span> questions you did not answer.</div>
-            <div><button id=playAgain> Play Again?</button></div>
+            <div>You got <span id=totalWrong></span> incorrect, including the <span id="notAnswered"></span> questions you did not answer.</div>
+            <div class="buttonDiv"><button id="playAgain"> Play Again?</button></div>
         </div>
        
         <script src="assets/javascript/app.js"></script>

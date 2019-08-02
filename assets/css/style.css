@@ -29,23 +29,32 @@ body{
     background-image: url('../images/question-background.png')
 }
 
-#questionForm, #answerForm{
-   display: none;
+#questionForm, #answerForm, #startingInfo{
    background-color: rgb(226, 226, 113);
    width:70%;
    position: relative;
    left: 15%;
+   padding: 15px 0;
+   
+}
+#questionForm, #answerForm{
+    display: none;
 }
 .question{
     padding-top: 15px
 }
-#endSubmitDiv{
-    padding-bottom: 15px;
-}
 #timerBlock{
     position: fixed;
-    left: 12%;
-    top: 15%;
+    left: 18%;
+    top: 20%;
     background-color: white;
     padding: 7px;
 }
+button{
+    height: 40px;
+    font-size: 22px;
+}
+.buttonDiv{
+    padding-top: 10px;
+}
+

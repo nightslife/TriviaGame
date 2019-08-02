@@ -21,8 +21,7 @@ function newGame(){
     selectedAnswersArr = [];
     missedAnswersCount = 0;
     correctCount = 0;
-    
-    $("#timeDisplay").text(timer)
+    $("#timeDisplay").text(timer);
 
 
     //start timer
@@ -31,7 +30,7 @@ function newGame(){
 
 
 function scoreGame(){
-    clearInterval(intervalID)
+    clearInterval(intervalID);
     //Get selected answers
     for (k of questionChoicesArr){
         var radioValue = $("input[name="+k+"]:checked").val()
@@ -41,7 +40,6 @@ function scoreGame(){
             selectedAnswersArr.push(radioValue)
         }
     }
-    console.log(selectedAnswersArr)
     //Hide Questions Window and display correct window
     document.getElementById("questionForm").style.display = "none";
     document.getElementById("answerForm").style.display = "block";
