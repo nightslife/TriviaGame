@@ -7,8 +7,10 @@ window.onload = function(){
 const correctAnswersArr = ["davidProwse","snake","bigToe","dreams","potatoHead"];
 var selectedAnswersArr = [];
 const questionChoicesArr = ["darthVader","mammel","hallux","phobia","toy"];
-var missedAnswersCount = 0
-var correctCount = 0
+var missedAnswersCount = 0;
+var correctCount = 0;
+var intervalID;
+var timer = 180;
 
 
 function newGame(){
@@ -19,16 +21,17 @@ function newGame(){
     selectedAnswersArr = [];
     missedAnswersCount = 0;
     correctCount = 0;
+    
+    $("#timeDisplay").text(timer)
 
 
     //start timer
-
-    //timer reaches 0 or submit button pressed
-
+    intervalID = setInterval(count,1000);
 }
 
 
 function scoreGame(){
+    clearInterval(intervalID)
     //Get selected answers
     for (k of questionChoicesArr){
         var radioValue = $("input[name="+k+"]:checked").val()
@@ -56,7 +59,15 @@ function scoreGame(){
 
 function startingGame (){
     //restart game
+    timer=180
     document.getElementById("answerForm").style.display = "none";
     document.getElementById("startingInfo").style.display = "block";
 
+}
+function count(){
+    timer--;
+    $("#timeDisplay").text(timer)
+    if(timer === 0){
+        scoreGame()
+    }
 }

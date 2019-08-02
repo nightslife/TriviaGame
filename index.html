@@ -19,7 +19,10 @@
             <div><button id=begin>Start the Quiz!</button></div>
         </div>
         <div id="questionForm">
-            
+                <div id=timerBlock>
+                    <p>Time Left:</p>
+                    <p id=timeDisplay></p>
+                </div>
             <div class=question id=q1>
                 Who physically portrayed Darth Vader in the original Star Wars trilogy?<br>
                     <input type="radio" name="darthVader" value="jamesEarlJones"> James Earl Jones
@@ -70,6 +73,7 @@
             <div>You got <span id=totalWrong></span> incorrect, including the <span id=notAnswered></span> questions you did not answer.</div>
             <div><button id=playAgain> Play Again?</button></div>
         </div>
+       
         <script src="assets/javascript/app.js"></script>
     </body>
 </html>
